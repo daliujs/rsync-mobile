@@ -1,6 +1,12 @@
 # rsync-&lt;arch&gt;
 使用 Android NDK 为不同的移动架构构建 rsync 可执行文件
 
+## Clone
+```bash
+  $ git clone https://github.com/daliujs/rsync-mobile
+  $ git submodule update --init --recursive
+```
+
 ## Android rsync-&lt;arch&gt; 文件
 
 1. 需要放到 /system/bin 目录下
