@@ -7,6 +7,14 @@
   $ git submodule update --init --recursive
 ```
 
+## Build
+```bash
+  // for build rsync-<arch>
+  $ ./ndk_build.sh
+  // for test bin files
+  $ ./test.sh
+```
+
 ## Android rsync-&lt;arch&gt; 文件
 
 1. 需要放到 /system/bin 目录下
