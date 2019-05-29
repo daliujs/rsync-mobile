@@ -1,7 +1,7 @@
-# rsync-<arch>
+# rsync-&lt;arch&gt;
 使用 Android NDK 为不同的移动架构构建 rsync 可执行文件
 
-## Android rsync-<arch> 文件
+## Android rsync-&lt;arch&gt; 文件
 
 1. 需要放到 /system/bin 目录下
 ```bash
@@ -11,7 +11,7 @@
 2. 修改owner & group 及执行权限 (注，如果需要的话)
 ```bash
   $ adb shell
-  $ chown root:shell /system/bin/rsync-arm
+  $ chown root:shell /system/bin/rsync-<arch>
   $ chmod a+x /system/bin/rsync-<arch>
 ```
 3. 修改文件属性
@@ -19,7 +19,7 @@
 $ chmod 755 /system/bin/rsync-<arch>
 ```
 
-## Android rsync daemon 服务端
+## Android rsync-&lt;arch&gt; daemon 服务端
 1. Rsync Daemon配置文件
 
 ```bash
@@ -67,9 +67,9 @@ $ cat /etc/hosts
 ```
 4. 启动 Rsync Daemon 服务
 ```bash
-$ rsync-arm  --daemon --verbose --config=/<path-to>/rsyncd.conf
+$ rsync-<arch>  --daemon --verbose --config=/<path-to>/rsyncd.conf
 ```
-## Android rsync 客户端
+## Android rsync-&lt;arch&gt; 客户端
 
 1. Password 文件
 ```bash
@@ -79,6 +79,6 @@ $ cat password
 
 2. 客户端 upload 文件到 服务端
 ```bash
-$ rsync-arm -rv --password-file=password ./* rsync://wanba@<server-ip>/sdcard_android_data
-$ rsync-arm -rv --password-file=password ./* wanba@10.1.3.86::sdcard_apks
+$ rsync-<arch> -rv --password-file=password ./* rsync://wanba@<server-ip>/sdcard_android_data
+$ rsync-<arch> -rv --password-file=password ./* wanba@10.1.3.86::sdcard_apks
 ```
