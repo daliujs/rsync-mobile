@@ -1,5 +1,5 @@
 # rsync-&lt;arch&gt;
-使用 Android NDK 为不同的移动架构构建 rsync 可执行文件
+使用 Android NDK 为不同的移动架构构建 [rsync](https://rsync.samba.org) 可执行文件
 
 ## Clone
 ```bash
