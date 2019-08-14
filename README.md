@@ -6,6 +6,10 @@
   $ git clone https://github.com/daliujs/rsync-mobile
   $ git submodule update --init --recursive
 ```
+一次搞定的命令：
+```bash
+  $ git clone --recurse-submodules https://github.com/daliujs/rsync-mobile
+```
 
 ## Build
 ```bash
